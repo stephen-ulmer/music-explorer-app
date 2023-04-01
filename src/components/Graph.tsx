@@ -25,9 +25,10 @@ function App() {
                 <Button href={`${import.meta.env.VITE_API_BASE_URL}/login`} type="link">Spotify</Button>
               </Card>
             }
-            />
-            <Route path="callback/*" element={<AccessTokenRetriever/>}/>
-            <Route path="artist-explorer" element={<ArtistExplorer/>}></Route>
+            >
+              <Route path="callback" element={<AccessTokenRetriever/>}/>
+              <Route path="artist-explorer" element={<ArtistExplorer/>}></Route>
+            </Route>
           </Routes>
         </Router>
       </Content>
