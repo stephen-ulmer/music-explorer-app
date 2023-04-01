@@ -1,12 +1,13 @@
-import './App.css'
+import '../App.css'
+import 'antd/dist/reset.css'
 import {AutoComplete, Button, Card, Input, Layout} from "antd";
 import {BrowserRouter as Router, Route, Routes, useLocation} from "react-router-dom"
 import React, {useCallback, useEffect, useRef, useState} from "react";
-import AuthService from "./service/AuthService";
-import SpotifySearchService from "./service/SpotifySearchService";
-import ArtistDto from "./service/ArtistDto";
+import AuthService from "../service/AuthService";
+import SpotifySearchService from "../service/SpotifySearchService";
+import ArtistDto from "../service/ArtistDto";
 import G6, {Graph, GraphData, IG6GraphEvent} from '@antv/g6';
-import SpotifyArtistService from "./service/SpotifyArtistService";
+import SpotifyArtistService from "../service/SpotifyArtistService";
 
 const {Header, Content} = Layout
 
@@ -14,7 +15,7 @@ const {Header, Content} = Layout
 function App() {
 
   return (
-    <Layout style={{width: "100%"}}>
+    <Layout>
       <Header></Header>
       <Content style={{width: "100%", height: "calc(100vh - 64px)"}}>
         <Router>
