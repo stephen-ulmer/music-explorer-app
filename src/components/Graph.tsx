@@ -20,14 +20,14 @@ function App() {
       <Content style={{width: "100%", height: "calc(100vh - 64px)"}}>
         <Router>
           <Routes>
+            <Route path="callback" element={<AccessTokenRetriever/>}/>
+            <Route path="artist-explorer" element={<ArtistExplorer/>}></Route>
             <Route path="" element={
               <Card title="Login">
                 <Button href={`${import.meta.env.VITE_API_BASE_URL}/login`} type="link">Spotify</Button>
               </Card>
             }
             >
-              <Route path="callback" element={<AccessTokenRetriever/>}/>
-              <Route path="artist-explorer" element={<ArtistExplorer/>}></Route>
             </Route>
           </Routes>
         </Router>
