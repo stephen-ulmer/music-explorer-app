@@ -25,7 +25,7 @@ function App() {
               </Card>
             }
             />
-            <Route path="callback" element={<AccessTokenRetriever/>}/>
+            <Route path="callback*" element={<AccessTokenRetriever/>}/>
             <Route path="artist-explorer" element={<ArtistExplorer/>}></Route>
           </Routes>
         </Router>
@@ -35,6 +35,8 @@ function App() {
 }
 
 function AccessTokenRetriever(){
+
+  console.log("access")
 
   const location = useLocation()
   const params = new URLSearchParams(location.search)
